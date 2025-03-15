@@ -1,0 +1,85 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    position: relative;
+}
+
+h1 {
+    font-size: 3.5em;
+    font-weight: 600;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 1s ease-in-out;
+    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.6);
+}
+
+.message, .ea-text, .long-text {
+    font-size: 1.5em;
+    opacity: 0;
+    margin-top: 20px;
+    transition: opacity 2s ease-in-out;
+    text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.5);
+}
+
+.long-text {
+    max-width: 70%;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 15px;
+    border-radius: 15px;
+    display: none;
+    color: #fff;
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 1.3em;
+    border: none;
+    background: linear-gradient(to right, #ffcc00, #ff6699);
+    color: white;
+    cursor: pointer;
+    border-radius: 25px;
+    margin-top: 20px;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background: linear-gradient(to right, #ffd700, #ff3366);
+    transform: scale(1.1);
+    box-shadow: 2px 2px 15px rgba(255, 255, 255, 0.5);
+}
+
+.hidden {
+    display: none;
+}
+
+.icon {
+    font-size: 1.5em;
+}
+
+.balloon {
+    position: absolute;
+    width: 55px;
+    height: 75px;
+    background: pink;
+    border-radius: 50%;
+    bottom: -100px;
+    animation: float 5s linear infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-800px); opacity: 0; }
+}
